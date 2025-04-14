@@ -57,11 +57,31 @@ canvas#mouse-net {
   margin-bottom: 2rem;
 }
 
+.view-work-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background-color: rgba(90, 168, 255, 0.1);
+  border: 1px solid #58a6ff;
+  border-radius: 6px;
+  color: #58a6ff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  margin-bottom: 2rem;
+}
+
+.view-work-btn:hover {
+  background-color: #58a6ff;
+  color: #0d1117;
+}
+
 .links {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .btn {
