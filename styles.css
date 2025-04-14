@@ -381,3 +381,72 @@ canvas#mouse-net {
     padding: 1.5rem;
   }
 }
+/* ===== Contact Section ===== */
+.contact-section {
+  padding: 6rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: #c9d1d9;
+  margin: 1rem 0 2rem;
+  line-height: 1.6;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  background-color: transparent;
+  border: 1px solid #58a6ff;
+  color: #58a6ff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.contact-btn:hover {
+  background-color: #79c0ff;
+  color: #0a0d13;
+}
+
+/* ===== Footer ===== */
+.footer {
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #8b949e;
+  background-color: #0a0d13;
+  border-top: 1px solid #2c313a;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.icon-link img {
+  width: 42px;
+  height: 42px;
+  filter: brightness(0) invert(1);
+  border: 1px solid #58a6ff;
+  border-radius: 8px;
+  padding: 8px;
+  transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.icon-link:hover img {
+  transform: scale(1.15);
+  border-color: #79c0ff;
+}
