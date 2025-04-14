@@ -7,13 +7,13 @@ let height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-const particles = [];
-const numParticles = 220;
+let particles = [];
+const numParticles = 100; // fewer dots
 
 const mouse = {
   x: null,
   y: null,
-  radius: 140
+  radius: 200 // bigger radius for more line connections
 };
 
 window.addEventListener("mousemove", (e) => {
@@ -54,6 +54,7 @@ class Particle {
 }
 
 function initParticles() {
+  particles = [];
   for (let i = 0; i < numParticles; i++) {
     particles.push(new Particle());
   }
@@ -69,11 +70,10 @@ function connectParticles() {
       const dy = particles[i].y - particles[j].y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < 150 && isNearMouse(particles[i], mouse)) {
-        // Only show lines when mouse is in hero section
+      if (distance < 200 && isNearMouse(particles[i], mouse)) { // more connection range
         if (mouse.y >= overlayRect.top && mouse.y <= overlayRect.bottom) {
           ctx.beginPath();
-          ctx.strokeStyle = "rgba(90, 168, 255, " + (1 - distance / 150) + ")";
+          ctx.strokeStyle = "rgba(90, 168, 255, " + (1 - distance / 200) + ")";
           ctx.lineWidth = 1;
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);

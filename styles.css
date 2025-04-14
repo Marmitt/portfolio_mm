@@ -20,8 +20,15 @@ canvas#mouse-net {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
+}
+
+.overlay,
+.about-section,
+#about {
+  position: relative;
+  z-index: 1;
 }
 
 .overlay {
@@ -35,8 +42,6 @@ canvas#mouse-net {
   max-width: 700px;
   margin: 0 auto;
   opacity: 1;
-  z-index: 2;
-  position: relative;
 }
 
 .overlay h1 {
