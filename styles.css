@@ -450,3 +450,64 @@ canvas#mouse-net {
   transform: scale(1.15);
   border-color: #79c0ff;
 }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(10, 13, 19, 0.9);
+  border-bottom: 1px solid #2c313a;
+  z-index: 100;
+  padding: 0.5rem 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  height: 36px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin-left: auto;
+  padding-right: 1rem;
+}
+
+.nav-links li a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #58a6ff;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1.2rem;
+    font-size: 0.95rem;
+  }
+  .logo img {
+    height: 30px;
+  }
+}
