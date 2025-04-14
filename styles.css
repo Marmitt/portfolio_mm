@@ -6,55 +6,55 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #0d1117;
-  color: #c9d1d9;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 2rem;
+html, body {
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  position: relative;
+  font-family: 'Inter', sans-serif;
+  color: #c9d1d9;
 }
 
-.content {
+#vanta-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   max-width: 700px;
-  animation: fadeInUp 1.2s ease-out forwards;
+  padding: 2rem;
+  animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
-  transform: translateY(40px);
-  position: relative;
-  z-index: 1;
 }
 
-h1 {
+.name {
   font-size: 3rem;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
-h2 {
-  font-size: 1.4rem;
-  font-weight: 400;
+.role {
+  font-size: 1.5rem;
   color: #8b949e;
   margin-bottom: 1.5rem;
 }
 
-p {
-  color: #d1d5db;
+.intro {
   font-size: 1rem;
+  line-height: 1.8;
   margin-bottom: 2rem;
 }
 
 .links a {
-  margin-right: 1.2rem;
+  margin: 0 1rem;
   color: #58a6ff;
-  font-weight: 500;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .links a:hover {
@@ -64,17 +64,6 @@ p {
 @keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
   }
-}
-
-.background-glow {
-  position: fixed;
-  top: -150px;
-  left: -150px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle at center, rgba(90, 168, 255, 0.2), transparent 70%);
-  filter: blur(100px);
-  z-index: 0;
 }
