@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mateus Marmitt – Software Engineer</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div id="vanta-bg">
-    <main class="main-container">
-      <h1 class="name">Mateus Marmitt</h1>
-      <h2 class="role">Software Engineer</h2>
-      <p class="intro">
-        I'm a software engineer passionate about building smart, minimal web tools using Python, Flask, and modern frontend frameworks. I enjoy creating efficient solutions and intuitive user experiences.
-      </p>
-      <div class="links">
-        <a href="https://github.com/Marmitt" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/mateusmarmitt/" target="_blank">LinkedIn</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mateus Marmitt – Software Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="vanta-bg">
+      <div class="overlay">
+        <h1 class="fade">Mateus Marmitt</h1>
+        <h2 class="fade">Software Engineer</h2>
+        <p class="fade">
+          I'm a software engineer passionate about building smart, minimal web tools using Python, Flask, and modern frontend frameworks. I enjoy creating efficient solutions and intuitive user experiences.
+        </p>
+        <div class="links fade">
+          <a href="https://github.com/Marmitt" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/mateusmarmitt/" target="_blank">LinkedIn</a>
+        </div>
       </div>
-    </main>
-  </div>
+    </div>
 
-  <!-- Vanta.js & Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-  <script>
-    VANTA.NET({
-      el: "#vanta-bg",
-      mouseControls: true,
-      touchControls: true,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x5aaaff,
-      backgroundColor: 0x0d1117,
-      points: 10.0,
-      maxDistance: 22.0,
-      spacing: 17.0
-    });
-  </script>
-</body>
+    <!-- Scripts: Vanta + Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        backgroundColor: 0x0d1117,
+        color: 0x5aaaff,
+        points: 10.0,
+        maxDistance: 20.0,
+        spacing: 18.0,
+        showDots: true
+      });
+    </script>
+  </body>
 </html>
