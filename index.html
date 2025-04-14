@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateus Marmitt Portfolio</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="mouse-net"></canvas>
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-container">
       <a href="#" class="logo">
-        <img src="assets/logo.png" alt="Mateus Marmitt Logo">
+        <img src="assets/logo.png" alt="Logo" />
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -13,38 +25,30 @@
       </ul>
     </div>
   </nav>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mateus Marmitt Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/logo.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <canvas id="mouse-net"></canvas>
-    <div class="overlay">
-      <h1 class="fade">Mateus Marmitt</h1>
-      <h2 class="fade">Software Engineer</h2>
-      <p class="fade">
-        A Software Engineer who loves automating processes and building efficient solutions. I work with Python, JavaScript, TypeScript, C#, PHP, and SQL, with experience in automation, APIs, databases, data processing, and web development using HTML, CSS, Flask, and modern frontend frameworks.
-      </p>
-      <div class="links fade">
-        <a class="btn" href="https://github.com/Marmitt" target="_blank">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/mateusmarmitt/" target="_blank">LinkedIn</a>
-        <a class="btn" href="/resume.pdf" target="_blank">Resume</a>
-      </div>
-      <a class="view-work-btn fade" href="#about">View my work ↓</a>
+
+  <!-- Hero -->
+  <div class="overlay">
+    <h1>Mateus Marmitt</h1>
+    <h2>Software Engineer</h2>
+    <p>
+      A Software Engineer who loves automating processes and building efficient solutions. I work with Python, JavaScript, TypeScript, C#, PHP, and SQL, with experience in automation, APIs, databases, data processing, and web development using HTML, CSS, Flask, and modern frontend frameworks.
+    </p>
+    <div class="links">
+      <a class="btn" href="https://github.com/Marmitt" target="_blank">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/mateusmarmitt/" target="_blank">LinkedIn</a>
+      <a class="btn" href="resume.pdf" target="_blank">Resume</a>
     </div>
+    <a class="view-work-btn" href="#about">View my work ↓</a>
+  </div>
 
-    <!-- About Section Placeholder -->
-    <section id="about"></section>
-    <section id="projects"></section>
-    <section id="contact"></section>
+  <!-- Sections -->
+  <section id="about"></section>
+  <section id="projects"></section>
+  <section id="contact"></section>
 
-    <script src="scripts.js"></script>
-  </body>
-  <footer class="footer">
-    <p>&copy; 2025 Mateus Marmitt — Built with lots of coffee</p>
-  </footer>  
+  <!-- Footer -->
+  <footer class="footer">© 2025 Mateus Marmitt - Built with lots of coffee</footer>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
