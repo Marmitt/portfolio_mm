@@ -23,6 +23,9 @@
       <a class="view-work-btn fade" href="#about">View my work ↓</a>
     </div>
 
+    <!-- About Section Placeholder -->
+    <section id="about"></section>
+
     <script>
       const canvas = document.getElementById("mouse-net");
       const ctx = canvas.getContext("2d");
@@ -123,6 +126,13 @@
 
       initParticles();
       animate();
+
+      // Load About Section
+      fetch("about.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("about").innerHTML = data;
+      });    
     </script>
   </body>
 </html>
