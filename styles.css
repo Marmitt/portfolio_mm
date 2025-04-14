@@ -162,8 +162,9 @@ canvas#mouse-net {
   font-size: 1.1rem;
   color: #c9d1d9;
   line-height: 1.8;
-  padding: 0 1rem;
+  max-width: 90%;
   text-align: left;
+  margin: 0 auto;
 }
 
 .about-right {
