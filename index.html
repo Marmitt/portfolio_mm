@@ -31,12 +31,12 @@
       canvas.height = height;
 
       const particles = [];
-      const numParticles = 100;
+      const numParticles = 160;
 
       const mouse = {
         x: null,
         y: null,
-        radius: 120
+        radius: 130
       };
 
       window.addEventListener("mousemove", (e) => {
@@ -89,10 +89,10 @@
             const dy = particles[i].y - particles[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 100) {
+            if (distance < 150) {
               if (distance < mouse.radius && isNearMouse(particles[i], mouse)) {
                 ctx.beginPath();
-                ctx.strokeStyle = "rgba(90, 168, 255, " + (1 - distance / 100) + ")";
+                ctx.strokeStyle = "rgba(90, 168, 255, " + (1 - distance / 150) + ")";
                 ctx.lineWidth = 1;
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
