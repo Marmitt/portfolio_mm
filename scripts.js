@@ -8,12 +8,12 @@ canvas.width = width;
 canvas.height = height;
 
 let particles = [];
-const numParticles = 100; // fewer dots
+const numParticles = 100;
 
 const mouse = {
   x: null,
   y: null,
-  radius: 200 // bigger radius for more line connections
+  radius: 200
 };
 
 window.addEventListener("mousemove", (e) => {
@@ -40,7 +40,6 @@ class Particle {
   update() {
     this.x += this.vx;
     this.y += this.vy;
-
     if (this.x < 0 || this.x > width) this.vx *= -1;
     if (this.y < 0 || this.y > height) this.vy *= -1;
   }
@@ -70,7 +69,7 @@ function connectParticles() {
       const dy = particles[i].y - particles[j].y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < 200 && isNearMouse(particles[i], mouse)) { // more connection range
+      if (distance < 200 && isNearMouse(particles[i], mouse)) {
         if (mouse.y >= overlayRect.top && mouse.y <= overlayRect.bottom) {
           ctx.beginPath();
           ctx.strokeStyle = "rgba(90, 168, 255, " + (1 - distance / 200) + ")";
@@ -103,11 +102,17 @@ function animate() {
 initParticles();
 animate();
 
-// Load About Section
+// Load About & Projects Sections
 document.addEventListener("DOMContentLoaded", () => {
   fetch("about.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("about").innerHTML = data;
+    });
+
+  fetch("projects.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("projects").innerHTML = data;
     });
 });
