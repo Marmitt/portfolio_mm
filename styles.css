@@ -57,15 +57,28 @@ canvas#mouse-net {
   margin-bottom: 2rem;
 }
 
-.links a {
-  margin: 0 1rem;
-  color: #4aa2ff;
-  text-decoration: none;
-  font-weight: 500;
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.links a:hover {
-  text-decoration: underline;
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: rgba(90, 168, 255, 0.1);
+  border: 1px solid #58a6ff;
+  border-radius: 6px;
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background-color: #58a6ff;
+  color: #0d1117;
 }
 
 @keyframes fadeIn {
