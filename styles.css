@@ -40,12 +40,9 @@ canvas#mouse-net {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  margin-right: auto;
+  justify-content: space-between;
+  position: relative;
 }
 
 .logo img {
@@ -71,16 +68,7 @@ canvas#mouse-net {
   color: #58a6ff;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  .navbar-container {
-    justify-content: center;
-  }
-}
-
-/* ===== Overlay (Hero Section) ===== */
+/* ===== Hero Section ===== */
 .overlay,
 .about-section,
 #about {
@@ -220,7 +208,6 @@ canvas#mouse-net {
   line-height: 1.7;
   color: #c9d1d9;
   text-align: left;
-  max-width: 100%;
 }
 
 .about-right {
@@ -241,7 +228,6 @@ canvas#mouse-net {
   color: #58a6ff;
   border-left: 4px solid #58a6ff;
   padding-left: 0.75rem;
-  margin-bottom: 0.5rem;
 }
 
 .skills-grid {
@@ -256,13 +242,18 @@ canvas#mouse-net {
   padding: 0.9rem;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 110px;
   border: 1px solid #2c313a;
+  transition: 0.2s ease;
+}
+
+.skill-tile:hover {
+  transform: translateY(-3px);
+  background-color: #151a22;
 }
 
 .skill-tile img {
@@ -277,22 +268,11 @@ canvas#mouse-net {
   color: #c9d1d9;
 }
 
-.skill-tile:hover {
-  transform: translateY(-3px);
-  background-color: #151a22;
-}
-
 /* ===== Projects Section ===== */
 .projects-section {
   padding: 7rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
 }
 
 .section-title {
@@ -301,6 +281,12 @@ canvas#mouse-net {
   text-align: center;
   margin-bottom: 4rem;
   font-weight: 700;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
 
 .project-card {
@@ -378,7 +364,6 @@ canvas#mouse-net {
 
 .project-buttons a:first-child:hover {
   background-color: #58a6ff;
-  color: #0a0d13;
 }
 
 .project-buttons a:last-child {
@@ -438,51 +423,81 @@ canvas#mouse-net {
   border-top: 1px solid #2c313a;
 }
 
-/* ===== Responsive Tweaks ===== */
+/* ===== Mobile Nav Toggle ===== */
+.menu-toggle {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .overlay h1 {
-    font-size: 2.4rem;
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: #58a6ff;
+    cursor: pointer;
+    padding-left: 1rem;
   }
 
-  .overlay h2 {
-    font-size: 1.2rem;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0a0d13;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 200px;
+    padding: 1rem;
+    border: 1px solid #2c313a;
+    border-radius: 8px;
+    z-index: 99;
   }
 
-  .overlay p {
-    font-size: 0.95rem;
+  .nav-links.show {
+    display: flex;
   }
 
-  .btn,
-  .view-work-btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+  .nav-links li {
+    margin: 0.6rem 0;
+  }
+
+  .project-content h3,
+  .project-content p {
+    text-align: center;
+  }
+
+  .project-buttons,
+  .project-tags {
+    justify-content: center;
   }
 
   .projects-container {
     grid-template-columns: 1fr;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-intro,
-  .project-content p,
-  .contact-description {
-    font-size: 1rem;
-    text-align: center;
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    background: none;
+    padding: 0;
+    border: none;
+    margin-left: auto;
   }
 
-  .project-content {
-    padding: 1.5rem;
-  }
-
-  .contact-icons {
-    gap: 1rem;
+  .menu-toggle {
+    display: none !important;
   }
 }

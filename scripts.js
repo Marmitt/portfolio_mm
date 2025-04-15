@@ -102,7 +102,7 @@ function animate() {
 initParticles();
 animate();
 
-// Load About & Projects Sections
+// Load Sections Dynamically
 document.addEventListener("DOMContentLoaded", () => {
   fetch("about.html")
     .then(res => res.text())
@@ -116,9 +116,17 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("projects").innerHTML = data;
     });
 
-    fetch("contact.html")
+  fetch("contact.html")
     .then(res => res.text())
     .then(data => {
-    document.getElementById("contact").innerHTML = data;
+      document.getElementById("contact").innerHTML = data;
     });
+});
+
+// Mobile Menu Toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });
